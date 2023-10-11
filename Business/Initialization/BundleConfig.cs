@@ -27,7 +27,9 @@ namespace InterlogicTask.Business.Initialization
                 .Include("~/Static/css/bootstrap-responsive.css")
                 .Include("~/Static/css/media.css")
                 .Include("~/Static/css/style.css", new CssRewriteUrlTransform())
-                .Include("~/Static/css/editmode.css"));
+                .Include("~/Static/css/editmode.css")
+                .Include("~/Static/css/usp-calculations.css")
+                .Include("~/Static/css/font-awesome.css"));
         }
 
         public void Uninitialize(InitializationEngine context)
