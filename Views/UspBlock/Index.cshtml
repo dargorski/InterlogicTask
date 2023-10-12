@@ -1,6 +1,5 @@
 @model InterlogicTask.Models.Blocks.UspBlock.UspModel
 
-<div class="MainUspBlock__Container">
     <div class="UspBlock__InfoArea">
         <p class="UspBlock__Title">@Html.PropertyFor(x => x.Title)</p>
         <ul class="UspBlock__Ul">
@@ -14,7 +13,6 @@
     </div>
     <div class="UspBlock__PriceArea">
         <h2 class="UspBlock__Price">@Html.PropertyFor(x => x.Price) kr.</h2>
+        <input class="UspBlock__PriceValue" type="hidden" id="UspBlock__OptionPrice" value=@Model.Price>
         <p class="UspBlock__PriceDescription">@Html.PropertyFor(x => x.PriceDescription)</p>
     </div>
-
-</div>

@@ -347,6 +347,7 @@
     <Compile Include="Models\Blocks\UspBlock\UspModelBuilder.cs" />
     <Compile Include="Models\Blocks\UspBlock\UspPropositionBlock.cs" />
     <Compile Include="Models\Blocks\UspBlock\UspModel.cs" />
+    <Compile Include="Models\Blocks\UspBlock\UspPropositionBlockVariant.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Media\VideoFile.cs" />
@@ -369,6 +370,7 @@
     <Compile Include="Models\SiteContentType.cs" />
     <Compile Include="Models\SiteImageUrl.cs" />
     <Compile Include="Models\ViewModels\CalculatorPage\UspCalculationPageModel.cs" />
+    <Compile Include="Models\ViewModels\CalculatorPage\UspCalculationPageModelBuilder.cs" />
     <Compile Include="Models\ViewModels\ContactBlockModel.cs" />
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
     <Compile Include="Models\ViewModels\FindSearchContentModel.cs" />
@@ -391,6 +393,7 @@
     <Content Include="Static\css\fonts\fontawesome-webfont.woff2" />
     <Content Include="Static\css\fonts\FontAwesome.otf" />
     <Content Include="Static\css\usp-calculations.css" />
+    <Content Include="Static\js\uspCalculations.js" />
     <Content Include="Views\UspBlock\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

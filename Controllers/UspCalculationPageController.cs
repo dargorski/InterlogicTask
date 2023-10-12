@@ -6,9 +6,17 @@ namespace InterlogicTask.Controllers
 {
     public class UspCalculationPageController : PageControllerBase<UspCalculationPage>
     {
+        private readonly UspCalculationPageModelBuilder _uspCalculationPageModelBuilder;
+
+        public UspCalculationPageController(UspCalculationPageModelBuilder uspCalculationPageModelBuilder)
+        {
+            _uspCalculationPageModelBuilder = uspCalculationPageModelBuilder;
+        }
+
         public ActionResult Index(UspCalculationPage currentPage)
         {
-            var model = new UspCalculationPageModel(currentPage);
+            var model = _uspCalculationPageModelBuilder.Build(currentPage);
+           
             return View(model);
         }        
     }

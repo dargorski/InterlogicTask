@@ -1,12 +1,64 @@
-.MainUspBlock__Container {
+
+.UspCalculationPage__GridContainer {
+    line-height: 2em;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.6fr 0.4fr;
-    border-radius: 8px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.UspCalculationPage__UspContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    justify-content: center;
+}
+
+.UspCalculationPage__CalculationContainer {
+    display: block;
+    padding-left: 6em;
+}
+
+.UspCalculationPage__CalculationTitle {
+    font-size: 2em;
+}
+
+.UspCalculationPage__FinalPriceHeading {
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+.UspCalculationPage__BottomUspBlocksContainer {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.MainUspBlock__Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 2px 3px 8px gray; 
+    border: black 0px;
+    border-radius: 12px;
+}
+
+.MainUspBlock__Selected {
     border: black 2px solid;
+    border-radius: 12px;
+}
+
+.UspPage__Title {
+    margin-bottom: 2em;
+    font-size: 24px;
+    font-weight: 600;
+    flex-basis: 100%;
 }
 
 .UspBlock__InfoArea {
     padding: 3em;
+    max-width: 50%;
 }
 
 .UspBlock__PriceArea {
@@ -15,7 +67,8 @@
 }
 
 .UspBlock__Price {
-    font-size: 4em;
+    font-size: 36px;
+    font-weight: 600;
 }
 
 .UspBlock__PriceDescription {
@@ -39,11 +92,113 @@
 }
 
 .UspBlock__Li:before {
-    content: "\f00c"; 
+    content: "\f00c";
     font-family: FontAwesome;
     display: inline-block;
     color: red;
-    margin-left: calc( var(--icon-space) * -1 );
+    margin-left: calc(var(--icon-space) * -1);
     width: var(--icon-space);
 }
+
+.UspPage__PlusInCircle {
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    padding: 0px;
+    margin: 1.5em 0 0.25em;
+
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+
+    font: 36px Arial, sans-serif;
+}
+
+.UspPage__BreakIntoNextRow {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.UspPage__AddOptionText {
+    color: red;
+}
+
+.UspCalculationPage__EmployeesNumberContainer {
+    margin-top: 1em;
+    margin-left: 1em;
+    display: flex;
+}
+
+.UspCalculationPage__EmployeesNumber {
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.UspCalculationPage__EmployeesText {
+    font-weight: 500;
+    font-size: 1.25em;
+    margin-left: 0.25em;
+}
+
+.UspCalculationPage__OptionSummaryContainer {
+    display: flex;
+    border-radius: 8px;
+    border: black 1px groove;
+    justify-content: space-between;
+}
+
+.UspCalculationPage__OptionSummaryContainer > p {
+    margin: 1em 1.5em;
+}
+
+.UspCalculationPage__AdditionalOptionHeading {
+    color: red;
+}
+
+.UspCalculationPage__PricePerDay {
+    display: flex;
+    gap: 3px;
+}
+
+.UspCalculationPage__MainOptionContainer {
+    margin-top: 2em;
+}
+
+.UspCalculationPage__AdditionalOptionContainer {
+    display: none;
+    margin-top: 2em;
+}
+
+.UspCalculationPage__SummarizedPriceContainer_PerOneEmployee {
+    display: flex;
+    justify-content: space-between;
+}
+
+.UspCalculationPage__SummarizedPriceContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.UspCalculationPage__Button {
+    width: 60%;
+    height: 50px;
+    border-radius: 24px;
+    background: red;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1em;
+    clear: both;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2em auto 0 5em;
+}
+
+.UspCalculationPage__Button:hover {
+    text-decoration:none;
+    color:#fff;
+}
+
+
 

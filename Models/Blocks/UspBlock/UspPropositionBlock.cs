@@ -32,7 +32,6 @@ namespace InterlogicTask.Models.Blocks.UspBlock
         public virtual string AdditionalDescription { get; set; }
 
         [Required]
-
         public virtual IList<string> ServicesList { get; set; }
     }
 }
