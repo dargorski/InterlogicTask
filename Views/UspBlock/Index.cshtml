@@ -1,7 +1,7 @@
 @model InterlogicTask.Models.Blocks.UspBlock.UspModel
 
     <div class="UspBlock__InfoArea">
-        <p class="UspBlock__Title">@Html.PropertyFor(x => x.Title)</p>
+        <h2 class="UspBlock__Title">@Html.PropertyFor(x => x.Title)</h2>
         <ul class="UspBlock__Ul">
             @{
                 foreach (var service in Model.ServicesList)

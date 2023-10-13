@@ -23,11 +23,10 @@ namespace InterlogicTask.Models.Pages
             Order = 20)]
         public virtual UspPropositionBlock MainUsp {get; set; }
         
-        [Required]
         [Display(GroupName = SystemTabNames.Content, 
             Name = "Bottom USP Blocks",
             Order = 30)]
-        [AllowedTypes(typeof(UspPropositionBlock))]
+        [AllowedTypes(typeof(OptionUspPropositionBlock))]
         public virtual ContentArea BottomUspBlocksContentArea { get; set; }
         
         [Required]

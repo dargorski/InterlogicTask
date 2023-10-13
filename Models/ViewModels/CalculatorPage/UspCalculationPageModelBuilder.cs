@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using EPiServer;
+using EPiServer.Core;
 using InterlogicTask.Models.Blocks.UspBlock;
 using InterlogicTask.Models.Pages;
 
@@ -24,7 +26,9 @@ namespace InterlogicTask.Models.ViewModels.CalculatorPage
 
         private IEnumerable<UspPropositionBlock> GetUspPropositionBlocks(UspCalculationPage currentPage)
         {
-            var contentAreaItems = currentPage.BottomUspBlocksContentArea.Items;
+            var contentAreaItems = currentPage.BottomUspBlocksContentArea != null
+                ? currentPage.BottomUspBlocksContentArea.Items
+                : Enumerable.Empty<ContentAreaItem>();
             var uspBlocks = new List<UspPropositionBlock>();
             foreach (var block in contentAreaItems)
             {

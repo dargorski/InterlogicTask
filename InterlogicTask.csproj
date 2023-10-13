@@ -316,6 +316,7 @@
     <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
     <Compile Include="Business\ServiceLocatorDependencyResolver.cs" />
     <Compile Include="Business\UIDescriptors\ContainerPageUIDescriptor.cs" />
+    <Compile Include="Controllers\OptionUspPropositionBlockController.cs" />
     <Compile Include="Controllers\UspCalculationPageController.cs" />
     <Compile Include="Controllers\ContactBlockController.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
@@ -336,6 +337,7 @@
     <Compile Include="Helpers\CategorizableExtensions.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\UrlHelpers.cs" />
+    <Compile Include="Helpers\Validators\UspCalculationPageValidator.cs" />
     <Compile Include="Models\Blocks\ButtonBlock.cs" />
     <Compile Include="Models\Blocks\ContactBlock.cs" />
     <Compile Include="Models\Blocks\EditorialBlock.cs" />
@@ -344,10 +346,10 @@
     <Compile Include="Models\Blocks\SiteBlockData.cs" />
     <Compile Include="Models\Blocks\SiteLogotypeBlock.cs" />
     <Compile Include="Models\Blocks\TeaserBlock.cs" />
+    <Compile Include="Models\Blocks\UspBlock\OptionUspPropositionBlock.cs" />
     <Compile Include="Models\Blocks\UspBlock\UspModelBuilder.cs" />
     <Compile Include="Models\Blocks\UspBlock\UspPropositionBlock.cs" />
     <Compile Include="Models\Blocks\UspBlock\UspModel.cs" />
-    <Compile Include="Models\Blocks\UspBlock\UspPropositionBlockVariant.cs" />
     <Compile Include="Models\Media\GenericMedia.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Media\VideoFile.cs" />
@@ -394,6 +396,7 @@
     <Content Include="Static\css\fonts\FontAwesome.otf" />
     <Content Include="Static\css\usp-calculations.css" />
     <Content Include="Static\js\uspCalculations.js" />
+    <Content Include="Views\OptionUspPropositionBlock\Index.cshtml" />
     <Content Include="Views\UspBlock\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

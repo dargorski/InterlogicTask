@@ -3,17 +3,16 @@
 @{
     var krPerDayString = "kr./md";
     var initialCalculation = Model.CurrentPage.MainUsp.Price * Model.CurrentPage.PreselectedNumberOfEmployees;
-    var uspBlockIndex = 0;
 }
+
+<h1 class="UspPage__Title">@Html.PropertyFor(x => x.CurrentPage.PageTitle)</h1>
 
 <div class="UspCalculationPage__GridContainer">
     <div class="UspCalculationPage__UspContainer">
-        <p class="UspPage__Title">@Html.PropertyFor(x => x.CurrentPage.PageTitle)</p>
-
         <div class="MainUspBlock__Container MainUspBlock__Selected">
             @Html.PropertyFor(x => x.CurrentPage.MainUsp)
         </div>
-        
+
         <div class="UspPage__BreakIntoNextRow"></div>
         <div class="UspPage__PlusInCircle">&#43;</div>
         <div class="UspPage__BreakIntoNextRow"></div>
@@ -23,9 +22,8 @@
             @{
                 foreach (var uspBlock in Model.UspPropositionBlocks)
                 {
-                    uspBlockIndex++;
-                    <div class="MainUspBlock__Container" id="@("uspBlock"+uspBlockIndex)">
-                    @Html.PropertyFor(x => uspBlock)
+                    <div class="OptionalUspBlock__Container">
+                        @Html.PropertyFor(x => uspBlock)
                     </div>
                 }
             }
@@ -33,7 +31,7 @@
     </div>
 
     <div class="UspCalculationPage__CalculationContainer">
-        <p class="UspCalculationPage__CalculationTitle">@Html.PropertyFor(x => x.CurrentPage.CalculationTitle)</p>
+        <h2 class="UspCalculationPage__CalculationTitle">@Html.PropertyFor(x => x.CurrentPage.CalculationTitle)</h2>
         <input class="UspPage__Slider" type="range" min=@Model.CurrentPage.MinimumNumberOfEmployees max=@Model.CurrentPage.MaximumNumberOfEmployees value=@Model.CurrentPage.PreselectedNumberOfEmployees>
 
         <div class="UspCalculationPage__EmployeesNumberContainer">
@@ -52,22 +50,22 @@
         <div class="UspCalculationPage__AdditionalOptionContainer">
             <p class="UspCalculationPage__OptionHeading UspCalculationPage__AdditionalOptionHeading">@Html.PropertyFor(x => x.CurrentPage.AdditionalOptionCostHeading)</p>
             <div class="UspCalculationPage__OptionSummaryContainer">
-                <p>@Html.PropertyFor(x => x.CurrentPage.MainUsp.Title)</p>
+                <p id="UspOptionText">@Html.PropertyFor(x => x.CurrentPage.MainUsp.Title) @string.Empty</p>
                 <p id="UspOptionPrice">@Html.PropertyFor(x => x.CurrentPage.MainUsp.Price) @krPerDayString</p>
             </div>
         </div>
 
-        <p class="UspCalculationPage__FinalPriceHeading">@Html.PropertyFor(x => x.CurrentPage.FinalPriceHeading)</p>
+        <h2 class="UspCalculationPage__FinalPriceHeading">@Html.PropertyFor(x => x.CurrentPage.FinalPriceHeading)</h2>
         <div class="UspCalculationPage__SummarizedPriceContainer_PerOneEmployee">
             <p>@Html.PropertyFor(x => x.CurrentPage.CostForEmployeeText)</p>
             <div class="UspCalculationPage__PricePerDay">
-                <p id="PricePerOneEmployee">@Html.PropertyFor(x => x.CurrentPage.MainUsp.Price)</p>
-                <p>@krPerDayString</p>
+                <h3 id="PricePerOneEmployee">@Html.PropertyFor(x => x.CurrentPage.MainUsp.Price)</h3>
+                <h3>@krPerDayString</h3>
             </div>
         </div>
         <div class="UspCalculationPage__SummarizedPriceContainer">
             <p>@Html.PropertyFor(x => x.CurrentPage.SummarizedCostText)</p>
-            <p class="UspCalculationPage_SummarizedPrice">@initialCalculation @krPerDayString</p>
+            <h3 class="UspCalculationPage_SummarizedPrice">@initialCalculation @krPerDayString</h3>
         </div>
 
         <a class="UspCalculationPage__Button row justify-content-md-center" href="@Model.CurrentPage.ButtonLink"> @Html.PropertyFor(m => m.CurrentPage.ButtonText)</a>
