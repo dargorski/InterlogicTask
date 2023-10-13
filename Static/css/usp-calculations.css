@@ -1,0 +1,322 @@
+
+.UspCalculationPage__GridContainer {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @media (max-width: 1200px) {
+        display: block;
+    }
+}
+
+.UspCalculationPage__GridContainer p {
+    font-size: 16px;
+}
+
+
+.UspCalculationPage__UspContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    justify-content: center;
+}
+
+.UspCalculationPage__CalculationContainer {
+    display: block;
+    padding-left: 4em;
+    margin: 1em;
+    
+    @media (max-width: 1200px) {
+        padding: 0;
+        margin: 3em 1em 1em;
+    }
+}
+
+.UspCalculationPage__CalculationContainer h3 {
+    line-height: 18px;
+}
+
+.UspCalculationPage__CalculationTitle {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.UspCalculationPage__FinalPriceHeading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 2em;
+}
+
+.UspCalculationPage__BottomUspBlocksContainer {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+.MainUspBlock__Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 2px 3px 8px gray;
+    border: black 0px;
+    border-radius: 12px;
+}
+
+.MainUspBlock__Container > .UspBlock__InfoArea {
+    max-width: 50%;
+}
+
+.UspBlock__PriceArea {
+    padding-top: 2em;
+}
+
+.MainUspBlock__Container > .UspBlock__PriceArea {
+    padding: 36px;
+    text-align: right;
+}
+
+
+
+.OptionalUspBlock__Container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    box-shadow: 2px 3px 8px gray;
+    border: black 0px;
+    border-radius: 12px;
+}
+
+.UspBlock__ServicesArea {
+    padding: 0 3em;
+}
+
+.MainUspBlock__Selected {
+    border: black 2px solid;
+    border-radius: 12px;
+}
+
+.UspPage__Slider {
+    margin-top: 1.25em;
+    color: gray;
+}
+input[type=range] {
+    width: 100%;
+    margin: 13.8px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: black;
+    border: 0.2px solid #808080;
+    border-radius: 50px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -4px;
+    width: 12px;
+    height: 12px;
+    background: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-track {
+    background: #808080;
+    border: 0.2px solid #808080;
+    border-radius: 1.3px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #808080;
+    border: 1px solid #808080;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 14.8px 0;
+    color: transparent;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+}
+
+.UspPage__Title {
+    margin: 1em 0.5em;
+    font-size: 36px;
+    font-weight: 600;
+    flex-basis: 100%;
+}
+
+.UspBlock__InfoArea {
+    padding: 36px;
+}
+
+.UspBlock__Price {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.UspBlock__PriceDescription {
+    margin-top: 0.75em;
+    font-size: 16px;
+}
+
+.UspBlock__AdditionalDescription {
+    margin-top: 0.75em;
+    font-size: 12px !important;
+}
+
+.UspBlock__Title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.UspBlock__Ul {
+    --icon-space: 2em;
+    list-style: none;
+    padding: 0;
+    margin: 1.5em 0 0;
+}
+
+.UspBlock__Li {
+    padding-left: var(--icon-space);
+    margin-top: 5px;
+}
+
+.UspBlock__Li:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    display: inline-block;
+    color: red;
+    margin-left: calc(var(--icon-space) * -1);
+    width: var(--icon-space);
+}
+
+.UspPage__PlusInCircle {
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    padding: 0px;
+    margin: 1.5em 0 0.25em;
+
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+
+    font: 36px Arial, sans-serif;
+}
+
+.UspPage__BreakIntoNextRow {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.UspPage__AddOptionText {
+    color: red;
+}
+
+.UspCalculationPage__EmployeesNumberContainer {
+    margin-top: 2em;
+    margin-left: 1em;
+    display: flex;
+}
+
+.UspCalculationPage__EmployeesNumber {
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+.UspCalculationPage__EmployeesText {
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-left: 0.25em;
+}
+
+.UspCalculationPage__OptionSummaryContainer {
+    display: flex;
+    border-radius: 8px;
+    border: black 1px groove;
+    justify-content: space-between;
+}
+
+.UspCalculationPage__OptionSummaryContainer > p {
+    margin: 1em 1.5em;
+}
+
+.UspCalculationPage__AdditionalOptionHeading {
+    color: red;
+}
+
+.UspCalculationPage__PricePerDay {
+    display: flex;
+    gap: 3px;
+}
+
+.UspCalculationPage__MainOptionContainer {
+    margin-top: 2em;
+}
+
+.UspCalculationPage__AdditionalOptionContainer {
+    display: none;
+    margin-top: 2em;
+}
+
+.UspCalculationPage__SummarizedPriceContainer_PerOneEmployee {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.UspCalculationPage__SummarizedPriceContainer_PerOneEmployee > p {
+    font-weight: 600;
+}
+
+.UspCalculationPage__SummarizedPriceContainer {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.UspCalculationPage__SummarizedPriceContainer > p {
+    font-weight: 600;
+}
+
+.UspCalculationPage__Button {
+    width: 60%;
+    height: 50px;
+    border-radius: 24px;
+    background: red;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1em;
+    clear: both;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2em auto 0 5em;
+}
+
+.UspCalculationPage__Button:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
